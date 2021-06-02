@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+  <head>
+    <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>bootstrap/home page</title>
+</head>
+<style>
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: rgb(255, 251, 251);
+  }
+  
+  li {
+    float: left;
+  }
+  
+  li a { font-family: 'Courier New', Courier, monospace;
+    display: block;
+    color: rgb(158, 138, 138);
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  
+    
+  }
+  a:hover {
+    color: hotpink;
+          }
+          body{
+              background-color: tomato;
+          }
+</style>
+
+<body>
+    <div class="header">
+        <nav>
+           <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="index (2).html">E-commerce</a></li>
+              <li><a href="socials.html">Socials</a></li>
+              <li><a href="socials2.html">socials +</a></li>
+                   <li><a href="news.html">News</a></li>
+                   <li><a href="new.html">GUESS WHAT ?</a></li>
+                    
+                        
+           </ul>
+        </nav>
+    </div>
+
+    <script>console.clear();
+
+        fetch('https://wt-8081b26e05bb4354f7d65ffc34cbbd67-0.sandbox.auth0-extend.com/new-function', {
+          method: 'post',
+          headers: {
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify({
+            name: "MzN International !"
+          })
+        })
+        .then(response => response.json())
+        .then(data => {
+          console.log(data);
+          document.body.innerHTML = `<h1>${data.name}</h1>`;
+        });</script>
+
+
+
+
+
+
+
+
+
+
+</body>
+  
+</html>
